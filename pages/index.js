@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
 
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import axios from 'axios'
 import styles from '../styles/Home.module.css'
 
-export default function Home({ teste }) {
+export default function Home({ teste = 'Hello World' }) {
   const [teste2, setTeste2] = useState('')
 
-  useEffect(() => {
-    axios.get('/api/hello').then(e => console.log(e.data))
-  }, [])
+  // useEffect(() => {
+  //   axios.get('/api/hello').then(e => console.log(e.data))
+  // }, [])
 
   return (
     <div className={styles.container}>
@@ -61,7 +61,7 @@ export default function Home({ teste }) {
         </div>
       </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -72,15 +72,15 @@ export default function Home({ teste }) {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
-      </footer>
+      </footer> */}
     </div>
   )
 }
 
-export const getServerSideProps = () => {
-  return {
-    props: {
-      teste: process.env.TESTE
-    }
-  }
-}
+// export const getServerSideProps = () => {
+//   return {
+//     props: {
+//       teste: process.env.TESTE
+//     }
+//   }
+// }

@@ -40,7 +40,7 @@ const FormNewPassword = ({ setIsModal, setMessage, setFunc }: FormLoginProps) =>
   const formValues = useRef<IFormValues | any>({})
 
   const redirectLogin = useCallback(() => {
-    console.log('aaaaaa')
+    // console.log('aaaaaa')
     router.push('/login')
   }, [])
 

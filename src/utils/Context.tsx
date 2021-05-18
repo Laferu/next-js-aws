@@ -167,8 +167,8 @@ export const GlobalProvider = ({ children }) => {
         setUsersData
       },
       url: {
-        baseUrl: 'http://localhost:3018',
-        apiUrl: 'http://localhost:3018/api'
+        baseUrl: process.env.REACT_APP_HOST,
+        apiUrl: process.env.REACT_APP_HOST + '/api'
       },
       functions: {
         handleConfirmModal,

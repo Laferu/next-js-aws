@@ -322,7 +322,7 @@ const HistoryTransactions = ({ profile, accountId }) => {
         queryParams: queries
       })
 
-      console.log(historyData.data)
+      // console.log(historyData.data)
 
       if (historyData.data.length === 0) {
         if (transactionsData.transactions.length > 0) {

@@ -30,7 +30,7 @@ const wrapper = ({ children }) => (
   </GlobalProvider>
 )
 
-const baseURL = 'http://localhost:3018/api/'
+const baseURL = process.env.REACT_APP_HOST + '/api/'
 
 describe('Rest API Hook', () => {
   it('Verificar o Get', async () => {

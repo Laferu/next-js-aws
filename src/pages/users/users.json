@@ -1,0 +1,37 @@
+[
+  {
+    "id": "159e21edd625b4ff0ef7cc13cc07377b5839c21ecf639ef8aafb0a865baf01c1",
+    "name": "Rafael Pereira de Araujo",
+    "document": "25513468948",
+    "status": "BASIC_APPROVED",
+    "amount": "15476.21"
+  },
+  {
+    "id": "b1cdf901db59bacb94b52c97259579557b6ae30b1d6c57a0bbe2ce7df18258c5",
+    "name": "Ana Paula Almeida",
+    "document": "43371487873",
+    "status": "BASIC_APPROVED",
+    "amount": "142.00"
+  },
+  {
+    "id": "39c8a7a2b8e52fe8e21bc9bce30b55fb1fba06fcdb6e8c8533eef930bcd80d91",
+    "name": "Gilmar SIlva",
+    "document": "68268489707",
+    "status": "BASIC_APPROVED",
+    "amount": "8.00"
+  },
+  {
+    "id": "57588f72823198f07c46e52b6ecd19a9d4bf416d1e7d9bebaf73ba07336a12e8",
+    "name": "Gilmar SIlva",
+    "document": "66333795100",
+    "status": "INITIAL",
+    "amount": "0.00"
+  },
+  {
+    "id": "e480ed7bbae5c147d35adc56c2a73f04527c35f3de362a627d8260e896c1f1be",
+    "name": "Gilmar SIlva",
+    "document": "21567281435",
+    "status": "INITIAL",
+    "amount": "0.00"
+  }
+]

@@ -28,7 +28,7 @@ import {
 } from '@/components/charts'
 
 const Home = ({ profile, accountId }) => {
-  console.log(accountId)
+  // console.log(accountId)
   // const getHistoryTransaction = useGetQuery('history-transactions')
 
   // const initialValues = useCallback(async () => {

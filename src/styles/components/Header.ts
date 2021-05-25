@@ -4,19 +4,19 @@ export const StyledHeader = styled.header`
   background: ${e => e.theme.palette.white.main};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: grid;
-  grid-template-columns: 115px 1fr 40px;
+  grid-template-columns: 100px 1fr 40px;
   justify-content: space-between;
   width: 100%;
   height: ${e => e.theme.headerHeight.mobile};
   z-index: 2;
 
   @media screen and (min-width: 480px) {
-    grid-template-columns: 115px 1fr 60px;
+    grid-template-columns: 100px 1fr 60px;
     height: ${e => e.theme.headerHeight.desktop};
   }
 
   @media screen and (min-width: 1000px) {
-    grid-template-columns: 200px 1fr 1fr;
+    grid-template-columns: 130px 1fr 1fr;
   }
 `
 
@@ -77,7 +77,7 @@ export const Logo = styled.img`
   align-self: center;
 
   @media screen and (min-width: 480px) {
-    height: 90px;
+    height: 70px;
   }
 `
 
@@ -86,7 +86,7 @@ export const UserInfo = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   /* Na próxima versão */
   /* margin-bottom: 10px; */
   color: ${e => e.theme.palette.secondary.dark};

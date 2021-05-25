@@ -28,6 +28,7 @@ interface IHistory {
   methodType: string
   isNegative: boolean
   status: string
+  name: string
 }
 
 const HistoryTransaction = ({ accountId }) => {
@@ -119,6 +120,7 @@ const HistoryTransaction = ({ accountId }) => {
           <th>Data</th>
           <th>Tipo de transação</th>
           <th>Valor</th>
+          <th>Cliente</th>
         </tr>
       </thead>
       <tbody>
@@ -129,7 +131,10 @@ const HistoryTransaction = ({ accountId }) => {
             </td>
             <td data-label='Data'>{e.date}</td>
             <td data-label='Tipo de transação'>{e.methodType}</td>
-            <TdValue  data-label='Valor' isNegative={e.isNegative}>{e.value}</TdValue>
+            <TdValue  data-label='Valor' isNegative={e.isNegative}>
+              {e.value}
+            </TdValue>
+            <td data-label='Tipo de transação'>{e.name}</td>
           </tr>
         ))}
       </tbody>

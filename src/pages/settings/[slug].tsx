@@ -29,6 +29,8 @@ import {
   Wrapper
 } from "@/styles/GlobalStyles"
 import {
+  StyledHeader,
+  TitleContainer,
   Description,
   EditPassButton,
   SendInviteButton,
@@ -272,7 +274,7 @@ const Settings = ({ profile }) => {
     <>
       <Title>Para alterar a senha...</Title>
       <Description>
-        Você deve colocar uma senha de no mínimo 9 dígitos, <br />
+        Você deve colocar uma senha de no mínimo 9 dígitos,
         onde pelo menos uma letra deverá ser maiúscula.
       </Description>
       <StyledForm onSubmit={handleSubmitPass}>
@@ -440,6 +442,11 @@ const Settings = ({ profile }) => {
             <BreadCrumb
               pages={pages}
             />
+            <StyledHeader>
+              <TitleContainer>
+                <Title>Configurações</Title>
+              </TitleContainer>
+            </StyledHeader>
             {/* <FitContainer> */}
               <TabsContainer className='mt-40' width='1000px'>
                 <ShadowBox>

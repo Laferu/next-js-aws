@@ -53,10 +53,10 @@ export const NavItem = styled.li<NavItemProps>`
     mask-repeat: no-repeat;
     mask-position: center;
     background-color: ${({ active, theme }) => active ? theme.palette.primary.main : theme.palette.white.main};
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     position: absolute;
-    left: 40px;
+    left: 26px;
   }
 
   &:hover {
@@ -76,7 +76,7 @@ export const NavItem = styled.li<NavItemProps>`
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-left: 110px;
+    padding-left: 90px;
     font-size: 18px;
     font-weight: 500 !important;
     text-align: left;

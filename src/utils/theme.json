@@ -27,11 +27,11 @@
     }
   },
   "headerHeight": {
-    "mobile": "80px",
-    "desktop": "100px"
+    "mobile": "75px",
+    "desktop": "75px"
   },
   "sidebarWidth": {
-    "w768": "110px",
-    "w768Animated": "260px"
+    "w768": "80px",
+    "w768Animated": "240px"
   }
 }

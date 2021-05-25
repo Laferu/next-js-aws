@@ -107,7 +107,7 @@ const CreateWalletsChart = () => {
     return (
       <g transform={`translate(${x},${y})`}>
         <text
-          x={8}
+          x={12}
           y={0}
           dy={14}
           textAnchor="end"
@@ -121,7 +121,7 @@ const CreateWalletsChart = () => {
   }
 
   const renderChart = (
-    <ResponsiveContainer width='100%' height={200}>
+    <ResponsiveContainer width='100%' height={270}>
       <LineChart
         id='wallets'
         data={result}
@@ -156,7 +156,7 @@ const CreateWalletsChart = () => {
   )
 
   return (
-    <Container height='330px'>
+    <Container height='400px'>
       <header>
         <TitleContainer>
           <Title>Criação de Carteiras</Title>

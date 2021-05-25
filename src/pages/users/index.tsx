@@ -133,7 +133,13 @@ const Users = ({ profile }) => {
   }, [listFilterMenu])
 
   const getData = useCallback(async () => {
-    const newArray = [...usersJson]
+    // const newArray = [...usersJson]
+    const newArray = usersJson.map(e => {
+      return {
+        ...e,
+        status: e.status === 'BASIC_APPROVED' ? 'Aprovado' : 'Criado'
+      }
+    })
     setUsersData([...newArray])
   }, [])
 

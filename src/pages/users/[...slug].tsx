@@ -256,7 +256,7 @@ const UserTransactions = ({ profile, user }) => {
           ) {
             const serviceUnique = serviceType
             .map(e => e.categoryValue)
-            .filter((elem, index, self) => index === self.indexOf(elem))
+            .filter((elem, index, self) => index === self.indexOf(elem) && elem !== undefined)
             .toString().replace(',', '')
             return {
               ...acc,
@@ -437,7 +437,7 @@ const UserTransactions = ({ profile, user }) => {
                     <div className='data-container'>
                       <p className='cpf'>CPF: {cpfMask(user.person.cpf).formatedValue}</p>
                       <p className='date'>Cliente ativo desde: {format(new Date(user.createdAt), 'dd/MM/yyyy')}</p>
-                      <p className='amount'>Saldo disponível: <span>R$2.582,15</span></p>
+                      <p className='amount'>Saldo disponível: <span>R$ 2.582,15</span></p>
                     </div>
                   </UserDataContainer>
                 </ShadowBox>

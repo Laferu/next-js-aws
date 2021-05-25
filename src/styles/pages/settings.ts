@@ -12,8 +12,21 @@ interface InputTextButtonProps {
   isVisible?: boolean
 }
 
+export const StyledHeader = styled.header`
+  /* padding: 0 15px; */
+
+  @media screen and (min-width: 768px) {
+    /* padding: 0 30px; */
+  }
+`
+
+export const TitleContainer = styled.div`
+  padding: 0 10px;
+  margin-bottom: 15px;
+`
+
 export const Description = styled.h3`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: ${e => e.theme.palette.secondary.dark};
   margin-top: 20px;

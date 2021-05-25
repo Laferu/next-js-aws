@@ -10,12 +10,15 @@ import SEO from "@/components/SEO"
 import Sidebar from "@/components/Sidebar"
 import {
   Wrapper,
-  StyledMain
+  MainHome,
+  Title
 } from "@/styles/GlobalStyles"
 import {
   Container,
   CardsContainer,
-  ChartsContainer
+  ChartsContainer,
+  StyledHeader,
+  TitleContainer
 } from '@/styles/pages/home'
 import {
   TransactionsChart,
@@ -55,9 +58,14 @@ const Home = ({ profile, accountId }) => {
       <Header profile={profile.data} />
       <Wrapper>
         <PerfectScrollbar>
-          <StyledMain>
+          <MainHome>
+            <StyledHeader>
+              <TitleContainer>
+                <Title>Dashboard</Title>
+              </TitleContainer>
+            </StyledHeader>
             <Container>
-              <ChartsContainer>
+              <ChartsContainer firstRow='800px'>
                 <TransactionsChart />
                 <CreateWalletsChart />
               </ChartsContainer>
@@ -71,7 +79,7 @@ const Home = ({ profile, accountId }) => {
                 <TypeTransactions />
               </ChartsContainer>
             </Container>
-          </StyledMain>
+          </MainHome>
         </PerfectScrollbar>
         <Sidebar />
       </Wrapper>

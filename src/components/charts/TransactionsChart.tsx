@@ -109,10 +109,10 @@ const TransactionsChart = () => {
     return (
       <g transform={`translate(${x},${y})`}>
         <text
-          x={8}
+          x={12}
           y={0}
           dy={14}
-          textAnchor="end"
+          textAnchor='end'
           fill={theme.palette.secondary.dark}
           className='axis-svg-text'
         >
@@ -123,7 +123,7 @@ const TransactionsChart = () => {
   }
 
   const renderChart = (
-    <ResponsiveContainer width='100%' height={200}>
+    <ResponsiveContainer width='100%' height={270}>
       <LineChart id='transactions' data={transactions}>
         <Line
           type="monotone"
@@ -143,7 +143,7 @@ const TransactionsChart = () => {
   )
 
   return (
-    <Container height='330px'>
+    <Container height='400px'>
       <header>
         <TitleContainer>
           <Title>Transações por Período</Title>

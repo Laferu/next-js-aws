@@ -78,7 +78,7 @@ const HistoryTransactions = ({ profile, accountId }) => {
           },
           {
             name: 'Pendente',
-            fieldValue: 'PENDING,CREATED,AWAITING_CONFIRMATION,PROCESSING,WARNING',
+            fieldValue: 'PENDING,CREATED,AWAITING_CONFIRMATION,PROCESSING',
             checked: false
           },
           {
@@ -286,8 +286,8 @@ const HistoryTransactions = ({ profile, accountId }) => {
           ) {
             const serviceUnique = serviceType
             .map(e => e.categoryValue)
-            .filter((elem, index, self) => index === self.indexOf(elem))
-            .toString().replace(',', '')
+            .filter((elem, index, self) => index === self.indexOf(elem) && elem !== undefined)
+            .toString()
             return {
               ...acc,
                 service: serviceUnique,
@@ -312,7 +312,6 @@ const HistoryTransactions = ({ profile, accountId }) => {
     queries: Object = {}
   ) => {
     setIsLoading(true)
-
     try {
       const limit = 10
       const historyData = await getTransactions.refetch({
@@ -450,12 +449,6 @@ const HistoryTransactions = ({ profile, accountId }) => {
     filterMenuInitialValues()
     initialData()
   }, [initialData, filterMenuInitialValues])
-
-  // useEffect(() => {
-  //   return () => {
-  //     setCurrentPage(0)
-  //   }
-  // }, [])
 
   return (
     <>

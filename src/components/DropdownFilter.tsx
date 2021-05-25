@@ -244,7 +244,7 @@ const DropdownFilter = ({
     })
 
     await action()
-  }, [])
+  }, [action])
 
   return (
     <Container>

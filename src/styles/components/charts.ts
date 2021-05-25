@@ -47,7 +47,7 @@ export const Container = styled.div<ContainerProps>`
   padding: 20px;
 
   .axis-svg-text {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     padding: 10px 0;
@@ -70,7 +70,7 @@ export const TitleContainer = styled.div`
 
 export const Title = styled.h2`
   color: ${e => e.theme.palette.secondary.dark};
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
@@ -96,7 +96,7 @@ export const TabsContainer = styled.div`
 
 export const Tab = styled.button<TabProps>`
   div {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 500;
     color: ${({theme, active}) => active ? theme.palette.primary.main : theme.palette.secondary.dark};
   }
@@ -104,7 +104,7 @@ export const Tab = styled.button<TabProps>`
 
 export const CardValueContainer = styled.div`
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 `
@@ -117,7 +117,7 @@ export const CardIcon = styled.span<IconCardProps>`
   background-color: ${e => e.theme.palette.primary.main};
   width: 40px;
   height: 40px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 
   @media screen and (min-width: 768px) {
     width: 60px;
@@ -158,10 +158,9 @@ export const CustomBarContainer = styled.div`
 
 export const CustomLabel = styled.p`
   width: 80px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   color: ${e => e.theme.palette.secondary.dark};
-  padding-left: 10px;
 `
 
 export const CustomBar = styled.div<CustomBarProps>`
@@ -413,6 +412,7 @@ export const ViewerMore = styled.button`
   z-index: 1;
   align-self: center;
   margin-top: 10px;
+  padding-top: 8px;
   padding-bottom: 12px;
   font-size: 18px;
   font-weight: 500;

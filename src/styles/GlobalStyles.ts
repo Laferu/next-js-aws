@@ -378,6 +378,15 @@ export const StyledMain = styled.main`
   }
 `
 
+export const MainHome = styled(StyledMain)`
+  @media screen and (min-width: 768px) {
+    padding-left: calc(${e => e.theme.sidebarWidth.w768} + 40px);
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
+  }
+`
+
 export const FitContainer = styled.div`
   padding: 0 15px;
 
@@ -494,7 +503,7 @@ export const Title = styled.h1`
   font-size: 20px;
 
   @media screen and (min-width: 768px) {
-    font-size: 34px;
+    font-size: 24px;
   }
 `
 
@@ -562,6 +571,7 @@ export const StyledTable = styled.table`
     padding: 0;
     position: absolute;
     width: 1px;
+    font-size: 16px;
   }
 
   tbody {

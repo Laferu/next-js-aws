@@ -35,7 +35,7 @@ export const MenuContainer = styled.ul<{ width: string }>`
   color: ${e => e.theme.palette.secondary.dark};
 
   @media screen and (min-width: 768px) {
-    height: 60px;
+    height: 45px;
   }
 `
 
@@ -83,7 +83,7 @@ export const DropdownItem = styled.li`
 
 export const ItemsContainer = styled.div`
   position: absolute;
-  top: 56px;
+  top: 41px;
   /* float: left; */
   /* height: 500px; */
   z-index: 2;
@@ -315,9 +315,10 @@ export const SelectedFiltersContainer = styled.div<{ width: string }>`
   border-radius: 10px;
   margin-top: 20px;
   padding: 15px;
+  padding-bottom: 5px;
 
   @media screen and (min-width: 768px) {
-    height: 100px;
+    min-height: 100px;
   }
 `
 
@@ -357,5 +358,6 @@ export const ClearButton = styled.button`
   color: ${e => e.theme.palette.white.main};
   width: 130px;
   height: 50px;
+  margin-bottom: 10px;
   align-self: center;
 `

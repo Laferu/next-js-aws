@@ -20,7 +20,7 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1;
+  /* flex: 1; */
   width: calc(100% - 20px);
   min-width: 220px;
   max-width: 692px;
@@ -41,8 +41,8 @@ export const FormTitle = styled.h1`
   padding-bottom: 20px;
 
   @media screen and (min-width: 768px) {
-    font-size: 64px;
-    padding-bottom: 40px;
+    font-size: 30px;
+    padding-bottom: 20px;
   }
 `
 
@@ -53,7 +53,7 @@ export const FormDescription = styled.h2`
   font-size: 16px;
 
   @media screen and (min-width: 768px) {
-    font-size: 30px;
+    font-size: 16px;
   }
 `
 
@@ -74,7 +74,7 @@ export const InputsContainer = styled.div`
   padding: 20px 10px 0 10px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 60px;
+    padding-top: 40px;
   }
 `
 
@@ -82,6 +82,28 @@ export const ButtonContainer = styled.div`
   padding: 0 20px 0 20px;
   display: flex;
   justify-content: center;
+`
+
+export const NeedHelpText = styled.a`
+  font-size: 12px;
+  color: ${e => e.theme.palette.primary.main};
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.6;
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 `
 
 export const StyledButton = styled.input.attrs(e => ({
@@ -106,30 +128,11 @@ export const StyledButton = styled.input.attrs(e => ({
   }
 
   @media screen and (min-width: 768px) {
-    height: 60px;
-    width: 400px;
-    font-size: 16px;
-  }
-`
+    height: 50px;
+    width: 250px;
 
-export const NeedHelpText = styled.a`
-  font-size: 12px;
-  color: ${e => e.theme.palette.primary.main};
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  &:hover {
-    text-decoration: underline;
-    opacity: 0.6;
-  }
-
-  &:active {
-    text-decoration: underline;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
+    && {
+      font-size: 16px;
+    }
   }
 `

@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding-bottom: 30px;
 
   @media screen and (min-width: 768px) {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 `
 
@@ -20,7 +20,7 @@ export const StyledLabel = styled.label`
   @media screen and (min-width: 768px) {
     padding-bottom: 20px;
     text-indent: 12px;
-    font-size: 14px;
+    font-size: 16px;
   }
 `
 
@@ -75,7 +75,7 @@ export const ForgetPasswordText = styled.a`
 
   @media screen and (min-width: 768px) {
     margin-right: 30px;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 28px;
   }
 

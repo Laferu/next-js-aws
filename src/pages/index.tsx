@@ -61,7 +61,7 @@ const Home = ({ profile, accountId }) => {
           <MainHome>
             <StyledHeader>
               <TitleContainer>
-                <Title>Dashboarde</Title>
+                <Title>Dashboard</Title>
               </TitleContainer>
             </StyledHeader>
             <Container>

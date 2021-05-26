@@ -1,0 +1,58 @@
+diff --git a/node_modules/@swp/swipe-sdk/build/src/cash-out.d.ts b/node_modules/@swp/swipe-sdk/build/src/cash-out.d.ts
+index 6e1488e..84c0531 100644
+--- a/node_modules/@swp/swipe-sdk/build/src/cash-out.d.ts
++++ b/node_modules/@swp/swipe-sdk/build/src/cash-out.d.ts
+@@ -9,7 +9,7 @@ export declare class CashOut {
+     getAllBoletos(searchOptions: SearchOptions): Promise<AxiosResponse<SwpSuccessResponse<BoletoCashOutDTO[]>>>;
+     newBankTransfer(param: NewBankTransferDTO): Promise<AxiosResponse<SwpSuccessResponse<BankTransferDTO>>>;
+     getBankTransfer(bankTransferId: string): Promise<AxiosResponse<SwpSuccessResponse<BankTransferDTO>>>;
+-    getBanks(): Promise<AxiosResponse<SwpSuccessResponse<BankDTO>>>;
++    getBanks(): Promise<AxiosResponse<SwpSuccessResponse<BankDTO[]>>>;
+     getAllBankTransfers(searchOptions: SearchOptions): Promise<AxiosResponse<SwpSuccessResponse<BankTransferDTO[]>>>;
+     newTopUp(topUp: NewTopUpDTO): Promise<AxiosResponse<SwpSuccessResponse<TopUpDTO>>>;
+     confirmTopUp(topUpId: string): Promise<AxiosResponse<SwpSuccessResponse<TopUpDTO>>>;
+diff --git a/node_modules/@swp/swipe-sdk/build/src/http/dto.d.ts b/node_modules/@swp/swipe-sdk/build/src/http/dto.d.ts
+index 7ce8efd..25ab749 100644
+--- a/node_modules/@swp/swipe-sdk/build/src/http/dto.d.ts
++++ b/node_modules/@swp/swipe-sdk/build/src/http/dto.d.ts
+@@ -120,8 +120,13 @@ export interface AssetBurnedDTO extends BurnAssetDTO {
+ }
+ export declare type NewActionDTO = NewTransferDTO | IssueAssetDTO | BurnAssetDTO;
+ export declare type ActionDTO = TransferDTO | AssetIssuedDTO | AssetBurnedDTO;
++export interface ActionDTOWithDataObject {
++  data: NewActionDTO
++  to: string
++  from?: string
++}
+ export interface NewActionBatchDTO {
+-    actions: NewActionDTO[];
++    actions: ActionDTOWithDataObject[];
+     fields?: Fields;
+ }
+ export declare enum ActionBatchStatus {
+@@ -132,7 +137,7 @@ export declare enum ActionBatchStatus {
+ export interface ActionBatchDTO extends NewActionBatchDTO {
+     id: string;
+     status: ActionBatchStatus;
+-    actions: ActionDTO[];
++    actions: ActionDTOWithDataObject[]
+     executedAt?: string;
+     error?: SwpError;
+     createdAt: string;
+@@ -363,6 +368,7 @@ export interface TopUpDTO extends NewTopUpDTO {
+     settledAt?: Date;
+     pin?: string;
+     status: CashOutStatus;
++    createdAt: string
+ }
+ export interface BasicPhone {
+     stateCode: string;
+@@ -719,7 +725,7 @@ export interface CashOutHistory {
+     ted: BankTransferDTO[];
+     boleto: BoletoCashOutDTO[];
+     top_up: TopUpDTO[];
+-    lottery: LotteryCashOutDTO;
++    lottery: LotteryCashOutDTO[];
+ }
+ export interface LedgerHistory {
+     actionBatch: ActionBatchDTO[];

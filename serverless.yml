@@ -1,0 +1,2 @@
+testeCloudFrontNextJS:
+  component: "@sls-next/serverless-component"

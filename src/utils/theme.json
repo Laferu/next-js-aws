@@ -1,0 +1,37 @@
+{
+  "palette": {
+    "primary": {
+      "dark": "#4F5F8E",
+      "main": "#130DFF",
+      "light": "#5E76FA"
+    },
+    "secondary": {
+      "dark": "#979797",
+      "main": "#C4C4C4",
+      "light": "#ECEBEB",
+      "lightButton": "#DADADA"
+    },
+    "borderGray": "#D8D8D8",
+    "white": {
+      "main": "#FFF"
+    },
+    "green": {
+      "dark": "#5EB879",
+      "main": "#2EFF87"
+    },
+    "warning": {
+      "main": "#FFC943"
+    },
+    "danger": {
+      "main": "#F01515"
+    }
+  },
+  "headerHeight": {
+    "mobile": "75px",
+    "desktop": "75px"
+  },
+  "sidebarWidth": {
+    "w768": "80px",
+    "w768Animated": "240px"
+  }
+}

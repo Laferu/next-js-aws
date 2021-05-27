@@ -1,4 +1,5 @@
 testeCloudFrontNextJS:
+  stage: "temp"
   component: "@sls-next/serverless-component"
   inputs:
     bucketName: swp-dashboard-temp

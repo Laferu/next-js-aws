@@ -35,5 +35,3 @@ jobs:
           aws-region: us-east-1
       - name: Deploy Next.js app
         run: npx serverless
-      - name: Delete env file
-        run: rm -rf .env

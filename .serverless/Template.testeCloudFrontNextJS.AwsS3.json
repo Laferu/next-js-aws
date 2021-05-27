@@ -1,6 +1,6 @@
 {
-  "name": "dzrkc6j-d9uvms",
+  "name": "swp-dashboard",
   "region": "us-east-1",
   "accelerated": true,
-  "url": "https://dzrkc6j-d9uvms.s3.amazonaws.com"
+  "url": "https://swp-dashboard.s3.amazonaws.com"
 }

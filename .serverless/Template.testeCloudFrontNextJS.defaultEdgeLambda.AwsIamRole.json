@@ -1,9 +1,9 @@
 {
-  "name": "dzrkc6j-uixdn9l",
-  "arn": "arn:aws:iam::727023269555:role/dzrkc6j-uixdn9l",
+  "name": "33ijlgm-nz1ehf7u",
+  "arn": "arn:aws:iam::727023269555:role/33ijlgm-nz1ehf7u",
   "service": [
-    "lambda.amazonaws.com",
-    "edgelambda.amazonaws.com"
+    "edgelambda.amazonaws.com",
+    "lambda.amazonaws.com"
   ],
   "policy": {
     "Version": "2012-10-17",
@@ -19,7 +19,7 @@
       },
       {
         "Effect": "Allow",
-        "Resource": "arn:aws:s3:::dzrkc6j-d9uvms/*",
+        "Resource": "arn:aws:s3:::swp-dashboard/*",
         "Action": [
           "s3:GetObject",
           "s3:PutObject"

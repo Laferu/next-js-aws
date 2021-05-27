@@ -1,2 +1,5 @@
 testeCloudFrontNextJS:
   component: "@sls-next/serverless-component"
+  inputs:
+    bucketName: swp-dashboard
+    name: swp-dashboard

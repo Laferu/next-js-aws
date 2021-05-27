@@ -1,14 +1,14 @@
 {
-  "id": "EQZT9G1MUDYP6",
-  "arn": "arn:aws:cloudfront::727023269555:distribution/EQZT9G1MUDYP6",
-  "url": "https://d2ubt6r5iwngwn.cloudfront.net",
+  "id": "E34F8A0S83CYL",
+  "arn": "arn:aws:cloudfront::727023269555:distribution/E34F8A0S83CYL",
+  "url": "https://d3k3iznhw3ib33.cloudfront.net",
   "region": "us-east-1",
   "enabled": true,
   "comment": "",
   "priceClass": "PriceClass_All",
   "origins": [
     {
-      "url": "http://dzrkc6j-d9uvms.s3.us-east-1.amazonaws.com",
+      "url": "http://swp-dashboard.s3.us-east-1.amazonaws.com",
       "private": true,
       "pathPatterns": {
         "_next/static/*": {
@@ -45,7 +45,7 @@
             "PATCH"
           ],
           "lambda@edge": {
-            "origin-request": "arn:aws:lambda:us-east-1:727023269555:function:dzrkc6j-si99l28:1"
+            "origin-request": "arn:aws:lambda:us-east-1:727023269555:function:swp-dashboard:9"
           }
         },
         "_next/image*": {
@@ -67,7 +67,7 @@
             ]
           },
           "lambda@edge": {
-            "origin-request": "arn:aws:lambda:us-east-1:727023269555:function:dzrkc6j-0qd9fon:1"
+            "origin-request": "arn:aws:lambda:us-east-1:727023269555:function:swp-dashboard:11"
           }
         },
         "_next/data/*": {
@@ -79,8 +79,8 @@
             "GET"
           ],
           "lambda@edge": {
-            "origin-response": "arn:aws:lambda:us-east-1:727023269555:function:dzrkc6j-5ge9xsf:1",
-            "origin-request": "arn:aws:lambda:us-east-1:727023269555:function:dzrkc6j-5ge9xsf:1"
+            "origin-response": "arn:aws:lambda:us-east-1:727023269555:function:swp-dashboard:13",
+            "origin-request": "arn:aws:lambda:us-east-1:727023269555:function:swp-dashboard:13"
           }
         }
       }
@@ -105,8 +105,8 @@
       "PATCH"
     ],
     "lambda@edge": {
-      "origin-request": "arn:aws:lambda:us-east-1:727023269555:function:dzrkc6j-5ge9xsf:1",
-      "origin-response": "arn:aws:lambda:us-east-1:727023269555:function:dzrkc6j-5ge9xsf:1"
+      "origin-request": "arn:aws:lambda:us-east-1:727023269555:function:swp-dashboard:13",
+      "origin-response": "arn:aws:lambda:us-east-1:727023269555:function:swp-dashboard:13"
     },
     "compress": true
   }

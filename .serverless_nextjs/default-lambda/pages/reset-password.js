@@ -103,7 +103,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "Ks+5");
+/******/ 	return __webpack_require__(__webpack_require__.s = "JV3M");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -14914,6 +14914,109 @@ throw new SerializableError(page,method,path,'`'+type+'`'+(type==='object'?` ("$
 
 /***/ }),
 
+/***/ "JV3M":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticParams", function() { return unstable_getStaticParams; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getServerProps", function() { return unstable_getServerProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return _app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
+/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
+/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fkL1");
+/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Skye");
+var private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t("Skye", 1);
+/* harmony import */ var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("LZ9C");
+var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t("LZ9C", 1);
+/* harmony import */ var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("67Bq");
+var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t("67Bq", 1);
+/* harmony import */ var next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("7ZOo");
+/* harmony import */ var next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__);
+
+      
+      
+      
+      
+      
+      
+  
+      
+      const { processEnv } = __webpack_require__("fXeI")
+      processEnv([{"path":".env","contents":"REACT_APP_HOST=https://d3k3iznhw3ib33.cloudfront.net\nREACT_APP_SDK_BASE_URL=https://dev.swipetech.io\nREACT_APP_SDK_SECRET=f376658abd7c1190937682e2fb7c5b9c3c02c86f5db08f03b3b414826c132cbf\nREACT_APP_SDK_API_KEY=2ab8a94d852ed9bd84f1a502afc27d03523f5d5c1ddd4e0c8a92843861dcdf0d\n"}])
+    
+      
+      const runtimeConfig = {}
+      
+  
+      const appMod = __webpack_require__("hUgY")
+      let App = appMod.default || appMod.then && appMod.then(mod => mod.default);
+  
+      const compMod = __webpack_require__("F5pO")
+  
+      const Component = compMod.default || compMod.then && compMod.then(mod => mod.default)
+      /* harmony default export */ __webpack_exports__["default"] = (Component);
+      const getStaticProps = compMod['getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['getStaticProp' + 's'])
+      const getStaticPaths = compMod['getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['getStaticPath' + 's'])
+      const getServerSideProps = compMod['getServerSideProp' + 's'] || compMod.then && compMod.then(mod => mod['getServerSideProp' + 's'])
+  
+      // kept for detecting legacy exports
+      const unstable_getStaticParams = compMod['unstable_getStaticParam' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticParam' + 's'])
+      const unstable_getStaticProps = compMod['unstable_getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticProp' + 's'])
+      const unstable_getStaticPaths = compMod['unstable_getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticPath' + 's'])
+      const unstable_getServerProps = compMod['unstable_getServerProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getServerProp' + 's'])
+  
+      let config = compMod['confi' + 'g'] || (compMod.then && compMod.then(mod => mod['confi' + 'g'])) || {}
+      const _app = App
+  
+      const { renderReqToHTML, render } = Object(next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__["getPageHandler"])({
+        pageModule: compMod,
+        pageComponent: Component,
+        pageConfig: config,
+        appModule: App,
+        documentModule: __webpack_require__("mT+M"),
+        errorModule: __webpack_require__("/a9y"),
+        notFoundModule: __webpack_require__("i6+/"),
+        pageGetStaticProps: getStaticProps,
+        pageGetStaticPaths: getStaticPaths,
+        pageGetServerSideProps: getServerSideProps,
+  
+        assetPrefix: "",
+        canonicalBase: "",
+        generateEtags: true,
+        poweredByHeader: true,
+  
+        runtimeConfig,
+        buildManifest: private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4__,
+        reactLoadableManifest: private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5__,
+  
+        rewrites: private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3__.rewrites,
+        i18n: undefined,
+        page: "/reset-password",
+        buildId: "z522PuZj6dd5WsZb-_GBj",
+        escapedBuildId: "z522PuZj6dd5WsZb\-_GBj",
+        basePath: "",
+        pageIsDynamic: false,
+        encodedPreviewProps: {previewModeId:"02ddc7b6c5385b2a90e65d709e16db36",previewModeSigningKey:"a48badde5b38959147cf9c98b0f4dd9eb721a7673ce36e1312f7dfe76bb31ffb",previewModeEncryptionKey:"eac23f702db47e1cbbc848289dd4bc4b65b59997a0af5b16745dce8e2d213f16"},
+        experimental: {
+          onError: next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"],
+          initServer: next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"],
+        }
+      })
+      
+    
+
+/***/ }),
+
 /***/ "Jq65":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15869,109 +15972,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "Ks+5":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticParams", function() { return unstable_getStaticParams; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getServerProps", function() { return unstable_getServerProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return _app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
-/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
-/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fkL1");
-/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Skye");
-var private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t("Skye", 1);
-/* harmony import */ var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("LZ9C");
-var private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t("LZ9C", 1);
-/* harmony import */ var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("67Bq");
-var private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t("67Bq", 1);
-/* harmony import */ var next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("7ZOo");
-/* harmony import */ var next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__);
-
-      
-      
-      
-      
-      
-      
-  
-      
-      const { processEnv } = __webpack_require__("fXeI")
-      processEnv([{"path":".env","contents":"REACT_APP_HOST=http://localhost:3018\nREACT_APP_SDK_BASE_URL=YOUR_BASE_URL\nREACT_APP_SDK_SECRET=YOUR_SECRET\nREACT_APP_SDK_API_KEY=YOUR_API_KEY\n"}])
-    
-      
-      const runtimeConfig = {}
-      
-  
-      const appMod = __webpack_require__("hUgY")
-      let App = appMod.default || appMod.then && appMod.then(mod => mod.default);
-  
-      const compMod = __webpack_require__("F5pO")
-  
-      const Component = compMod.default || compMod.then && compMod.then(mod => mod.default)
-      /* harmony default export */ __webpack_exports__["default"] = (Component);
-      const getStaticProps = compMod['getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['getStaticProp' + 's'])
-      const getStaticPaths = compMod['getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['getStaticPath' + 's'])
-      const getServerSideProps = compMod['getServerSideProp' + 's'] || compMod.then && compMod.then(mod => mod['getServerSideProp' + 's'])
-  
-      // kept for detecting legacy exports
-      const unstable_getStaticParams = compMod['unstable_getStaticParam' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticParam' + 's'])
-      const unstable_getStaticProps = compMod['unstable_getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticProp' + 's'])
-      const unstable_getStaticPaths = compMod['unstable_getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticPath' + 's'])
-      const unstable_getServerProps = compMod['unstable_getServerProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getServerProp' + 's'])
-  
-      let config = compMod['confi' + 'g'] || (compMod.then && compMod.then(mod => mod['confi' + 'g'])) || {}
-      const _app = App
-  
-      const { renderReqToHTML, render } = Object(next_dist_build_webpack_loaders_next_serverless_loader_page_handler__WEBPACK_IMPORTED_MODULE_6__["getPageHandler"])({
-        pageModule: compMod,
-        pageComponent: Component,
-        pageConfig: config,
-        appModule: App,
-        documentModule: __webpack_require__("mT+M"),
-        errorModule: __webpack_require__("/a9y"),
-        notFoundModule: __webpack_require__("i6+/"),
-        pageGetStaticProps: getStaticProps,
-        pageGetStaticPaths: getStaticPaths,
-        pageGetServerSideProps: getServerSideProps,
-  
-        assetPrefix: "",
-        canonicalBase: "",
-        generateEtags: true,
-        poweredByHeader: true,
-  
-        runtimeConfig,
-        buildManifest: private_dot_next_build_manifest_json__WEBPACK_IMPORTED_MODULE_4__,
-        reactLoadableManifest: private_dot_next_react_loadable_manifest_json__WEBPACK_IMPORTED_MODULE_5__,
-  
-        rewrites: private_dot_next_routes_manifest_json__WEBPACK_IMPORTED_MODULE_3__.rewrites,
-        i18n: undefined,
-        page: "/reset-password",
-        buildId: "0ItWLF7vtsJ2hc1rmBDaZ",
-        escapedBuildId: "0ItWLF7vtsJ2hc1rmBDaZ",
-        basePath: "",
-        pageIsDynamic: false,
-        encodedPreviewProps: {previewModeId:"43012b3c993cd3dbfb134ff21c3c365d",previewModeSigningKey:"e003058f98f870a77c4178aa163e561885da1f97b7ca2114838310ff9136bb0e",previewModeEncryptionKey:"87b949fe02f43a6449e17c140d4e1886ba1a5c91c020e16a488838383d86929c"},
-        experimental: {
-          onError: next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"],
-          initServer: next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"],
-        }
-      })
-      
-    
-
-/***/ }),
-
 /***/ "KyNf":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16119,7 +16119,7 @@ module.exports = function createError(message, config, code, request, response) 
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"polyfillFiles\":[\"static/chunks/polyfills-e4c38ea28892f36667af.js\"],\"devFiles\":[],\"ampDevFiles\":[],\"lowPriorityFiles\":[\"static/0ItWLF7vtsJ2hc1rmBDaZ/_buildManifest.js\",\"static/0ItWLF7vtsJ2hc1rmBDaZ/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/pages/index-d3cb100a32a5e0c350ed.js\"],\"/404\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/pages/404-8766835b8046b0b62d26.js\"],\"/_app\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/css/68be7f193f230b5a7780.css\",\"static/chunks/pages/_app-26909821b98861be0906.js\"],\"/_error\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/pages/_error-1b8530dd08a1743694ba.js\"],\"/examples\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/pages/examples-da008d642e36b4abb318.js\"],\"/examples/example-error-bondary\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/pages/examples/example-error-bondary-747d59750a98d70c442e.js\"],\"/examples/protected-client-route-example\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/pages/examples/protected-client-route-example-db6aa8aca7a453ef1d93.js\"],\"/history-transactions\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/e9f0abe1cc5466c3c3754e28c427ee646445e559.251ee16d8b6f96401594.js\",\"static/chunks/pages/history-transactions-2c7ce2028cd603f18db3.js\"],\"/history-transactions/[...slug]\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/pages/history-transactions/[...slug]-ccfea2b3b918f0bcf945.js\"],\"/login\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/pages/login-bcd4a4006f743aefdf03.js\"],\"/logout\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/pages/logout-665dd381910c263c3816.js\"],\"/reset-password\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/pages/reset-password-7d5949eab026dc417642.js\"],\"/reset-password/[...slug]\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/pages/reset-password/[...slug]-c1f183a8085f8279f4fc.js\"],\"/settings\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/pages/settings-805943133bb24889201c.js\"],\"/settings/[slug]\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/pages/settings/[slug]-886f648e99d9e3043644.js\"],\"/users\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/e9f0abe1cc5466c3c3754e28c427ee646445e559.251ee16d8b6f96401594.js\",\"static/chunks/pages/users-db5c597e10cbadd102c4.js\"],\"/users/[...slug]\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.c4187258db0b31b56d96.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/e9f0abe1cc5466c3c3754e28c427ee646445e559.251ee16d8b6f96401594.js\",\"static/chunks/pages/users/[...slug]-55f62bbad570a9cc7f72.js\"]},\"ampFirstPages\":[]}");
+module.exports = JSON.parse("{\"polyfillFiles\":[\"static/chunks/polyfills-e4c38ea28892f36667af.js\"],\"devFiles\":[],\"ampDevFiles\":[],\"lowPriorityFiles\":[\"static/z522PuZj6dd5WsZb-_GBj/_buildManifest.js\",\"static/z522PuZj6dd5WsZb-_GBj/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/pages/index-378e8dc240c8c597bde3.js\"],\"/404\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/pages/404-8766835b8046b0b62d26.js\"],\"/_app\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/css/68be7f193f230b5a7780.css\",\"static/chunks/pages/_app-26909821b98861be0906.js\"],\"/_error\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/pages/_error-1b8530dd08a1743694ba.js\"],\"/examples\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/pages/examples-da008d642e36b4abb318.js\"],\"/examples/example-error-bondary\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/pages/examples/example-error-bondary-747d59750a98d70c442e.js\"],\"/examples/protected-client-route-example\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/pages/examples/protected-client-route-example-db6aa8aca7a453ef1d93.js\"],\"/history-transactions\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/e9f0abe1cc5466c3c3754e28c427ee646445e559.251ee16d8b6f96401594.js\",\"static/chunks/pages/history-transactions-2c7ce2028cd603f18db3.js\"],\"/history-transactions/[...slug]\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/pages/history-transactions/[...slug]-ccfea2b3b918f0bcf945.js\"],\"/login\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/pages/login-bcd4a4006f743aefdf03.js\"],\"/logout\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/pages/logout-665dd381910c263c3816.js\"],\"/reset-password\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/pages/reset-password-7d5949eab026dc417642.js\"],\"/reset-password/[...slug]\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/pages/reset-password/[...slug]-c1f183a8085f8279f4fc.js\"],\"/settings\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/pages/settings-805943133bb24889201c.js\"],\"/settings/[slug]\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/pages/settings/[slug]-886f648e99d9e3043644.js\"],\"/users\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/e9f0abe1cc5466c3c3754e28c427ee646445e559.251ee16d8b6f96401594.js\",\"static/chunks/pages/users-db5c597e10cbadd102c4.js\"],\"/users/[...slug]\":[\"static/chunks/main-587b143f6b80c42c46df.js\",\"static/chunks/webpack-3a6e34fc751182996c70.js\",\"static/chunks/framework.36e5d30ecc6dc4b81c51.js\",\"static/chunks/3bd5b95a25f81984d46fd45a60b6bd067b175d78.71d68ec00d361c7548dd.js\",\"static/chunks/6fbfcb19458b4be764985326901ff6b6d626e584.a716048f9e7edbd68a5c.js\",\"static/chunks/c9b00c107a0ed3181d04453b66d8552cb2e9f202.582c222fc592c46678a9.js\",\"static/chunks/a714984503306d43a95ba8b1cfcab310d016d56b.b7f21fad201991170c73.js\",\"static/chunks/2c292dd2ede42b115799daf59488c5602ee67737.a370eafc4e176af4d613.js\",\"static/chunks/4949de255d5259d1c23950d676d7c09ef44657e9.2a968e695e6e8e4cef4b.js\",\"static/chunks/d5ac3117daec0692a867bd171be381eaabce9a0f.520bfab2857b6b56a080.js\",\"static/chunks/e9f0abe1cc5466c3c3754e28c427ee646445e559.251ee16d8b6f96401594.js\",\"static/chunks/pages/users/[...slug]-55f62bbad570a9cc7f72.js\"]},\"ampFirstPages\":[]}");
 
 /***/ }),
 
@@ -31517,7 +31517,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const theme = _objectSpread(_objectSpread({}, _utils_theme_json__WEBPACK_IMPORTED_MODULE_3__), {}, {
-  baseUrl: "http://localhost:3018"
+  baseUrl: "https://d3k3iznhw3ib33.cloudfront.net"
 });
 
 const GlobalContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_1__["createContext"])(null);
@@ -31622,8 +31622,8 @@ const GlobalProvider = ({
         setUsersData
       },
       url: {
-        baseUrl: "http://localhost:3018",
-        apiUrl: "http://localhost:3018" + '/api'
+        baseUrl: "https://d3k3iznhw3ib33.cloudfront.net",
+        apiUrl: "https://d3k3iznhw3ib33.cloudfront.net" + '/api'
       },
       functions: {
         handleConfirmModal,

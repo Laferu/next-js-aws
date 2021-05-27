@@ -21,6 +21,8 @@ jobs:
           echo REACT_APP_SDK_SECRET=${{ secrets.REACT_APP_SDK_SECRET }} >> .env
           echo REACT_APP_SDK_API_KEY=${{ secrets.REACT_APP_SDK_API_KEY }} >> .env
           cat .env
+      - name: Verificar arquivos
+        run: ls -la && cat .env
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
@@ -35,3 +37,5 @@ jobs:
           aws-region: us-east-1
       - name: Deploy Next.js app
         run: npx serverless
+      - name: Verificar arquivos novamente
+        run: ls -la && cat .env

@@ -4,4 +4,4 @@ testeCloudFrontNextJS:
   inputs:
     bucketName: swp-dashboard-temp
     name: swp-dashboard-temp
-    domain: ["d2w5yrz9uuddwv", "cloudfront.net"]
+    domain: "swipetech.com.br"

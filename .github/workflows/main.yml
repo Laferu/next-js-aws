@@ -25,13 +25,13 @@ jobs:
           aws-access-key-id: ${{ secrets.KEY_ID }}
           aws-secret-access-key: ${{ secrets.KEY_SECRET }}
           aws-region: us-east-1
-          react-app-host: secrets.REACT_APP_HOST
-          react-app-sdk-base-url: secrets.REACT_APP_SDK_BASE_URL
-          react-app-sdk-secret: secrets.REACT_APP_SDK_SECRET
-          react-app-sdk-api-key: secrets.REACT_APP_SDK_API_KEY
+      - name: Create env file true
+        env:
+          REACT_APP_HOST=${{ secrets.REACT_APP_HOST }}
+          REACT_APP_SDK_BASE_URL=${{ secrets.REACT_APP_SDK_BASE_URL }}
+          REACT_APP_SDK_SECRET=${{ secrets.REACT_APP_SDK_SECRET }}
+          REACT_APP_SDK_API_KEY=${{ secrets.REACT_APP_SDK_API_KEY }}
       - name: Verificar arquivos
         run: ls -la && cat .env
       - name: Deploy Next.js app
         run: npx serverless
-      - name: Verificar arquivos novamente
-        run: ls -la && cat .env

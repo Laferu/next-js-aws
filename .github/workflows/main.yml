@@ -13,6 +13,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Create env file
+        run: |
+          touch .env
+          echo REACT_APP_HOST=${{ secrets.REACT_APP_HOST }} >> .env
+          echo REACT_APP_SDK_BASE_URL=${{ secrets.REACT_APP_SDK_BASE_URL }} >> .env
+          echo REACT_APP_SDK_SECRET=${{ secrets.REACT_APP_SDK_SECRET }} >> .env
+          echo REACT_APP_SDK_API_KEY=${{ secrets.REACT_APP_SDK_API_KEY }} >> .env
+          cat .env
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
@@ -27,3 +35,5 @@ jobs:
           aws-region: us-east-1
       - name: Deploy Next.js app
         run: npx serverless
+      - name: Delete env file
+        run: rm -rf .env

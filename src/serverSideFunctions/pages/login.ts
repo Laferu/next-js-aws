@@ -21,18 +21,24 @@ export const loginServerSideProps: GetServerSideProps = async ({ req, res }) => 
         }
       } else {
         return {
-          props: {}
+          props: {
+            teste: 'aaa'
+          }
         }
       }
 
     } else {
       return {
-        props: {}
+        props: {
+          teste: 'aaa'
+        }
       }
     }
   } catch (error) {
     return {
-      props: {}
+      props: {
+        teste: 'aaa'
+      }
     }
   }
 }

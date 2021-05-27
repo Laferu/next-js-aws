@@ -13,16 +13,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Create env file
-        run: |
-          touch .env
-          echo REACT_APP_HOST=${{ secrets.REACT_APP_HOST }} >> .env
-          echo REACT_APP_SDK_BASE_URL=${{ secrets.REACT_APP_SDK_BASE_URL }} >> .env
-          echo REACT_APP_SDK_SECRET=${{ secrets.REACT_APP_SDK_SECRET }} >> .env
-          echo REACT_APP_SDK_API_KEY=${{ secrets.REACT_APP_SDK_API_KEY }} >> .env
-          cat .env
-      - name: Verificar arquivos
-        run: ls -la && cat .env
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
@@ -35,6 +25,15 @@ jobs:
           aws-access-key-id: ${{ secrets.KEY_ID }}
           aws-secret-access-key: ${{ secrets.KEY_SECRET }}
           aws-region: us-east-1
+      - name: Create env file
+        run: |
+          echo REACT_APP_HOST=${{ secrets.REACT_APP_HOST }} >> .env
+          echo REACT_APP_SDK_BASE_URL=${{ secrets.REACT_APP_SDK_BASE_URL }} >> .env
+          echo REACT_APP_SDK_SECRET=${{ secrets.REACT_APP_SDK_SECRET }} >> .env
+          echo REACT_APP_SDK_API_KEY=${{ secrets.REACT_APP_SDK_API_KEY }} >> .env
+          cat .env
+      - name: Verificar arquivos
+        run: ls -la && cat .env
       - name: Deploy Next.js app
         run: npx serverless
       - name: Verificar arquivos novamente

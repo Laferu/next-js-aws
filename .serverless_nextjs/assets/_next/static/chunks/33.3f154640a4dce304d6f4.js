@@ -1,1 +1,0 @@
-(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[33],{"06cG":function(n,e,c){"use strict";c.r(e);var i=c("nKUr");e.default=function(){return Object(i.jsx)("div",{children:Object(i.jsx)("p",{children:"Teste Lazy Loading"})})}}}]);

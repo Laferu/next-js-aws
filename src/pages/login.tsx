@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from 'react'
+import { useCallback, useState } from 'react'
 import dynamic from 'next/dynamic'
 
 import SEO from '@/components/SEO'
@@ -14,10 +14,7 @@ const AlertModal = dynamic(
   { loading: () => <p>Carregando...</p>, ssr: false }
 )
 
-const Login = ({ teste = '???' }) => {
-  useEffect(() => {
-    console.log(teste)
-  }, [])
+const Login = () => {
 
   const close = useCallback(() => {
     setIsModal(false)

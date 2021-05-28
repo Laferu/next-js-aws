@@ -27,14 +27,7 @@ export const loginServerSideProps: GetServerSideProps = async ({ req, res }) => 
 
     } else {
       return {
-        props: {
-          teste: {
-            baseUrl: process.env.REACT_APP_HOST,
-            apiKey: process.env.REACT_APP_SDK_API_KEY,
-            secret: process.env.REACT_APP_SDK_SECRET,
-            customHost: process.env.REACT_APP_SDK_BASE_URL,
-          }
-        }
+        props: {}
       }
     }
   } catch (error) {

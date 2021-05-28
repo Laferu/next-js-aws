@@ -17,6 +17,7 @@ const Login = async (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     const { data } = await sdk.Login.newSession(login)
+    console.log(data)
 
     res.json({ data })
   } catch (error) {

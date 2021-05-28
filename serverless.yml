@@ -4,4 +4,5 @@ testeCloudFrontNextJS:
   inputs:
     bucketName: swp-dashboard-temp
     name: swp-dashboard-temp
-    domain: ["dashboard2" ,"swipetech.com.br"]
+    cloudfront:
+      distributionId: E7XJB5RVR6DNZ

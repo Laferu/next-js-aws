@@ -14,7 +14,7 @@ const AlertModal = dynamic(
   { loading: () => <p>Carregando...</p>, ssr: false }
 )
 
-const Login = ({ teste }) => {
+const Login = ({ teste = '???' }) => {
   useEffect(() => {
     console.log(teste)
   }, [])

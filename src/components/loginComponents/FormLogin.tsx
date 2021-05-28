@@ -57,7 +57,7 @@ const FormLogin = ({ setIsModal, setMessageError }: FormLoginProps) => {
 
         return
       }
-      console.log(result)
+      console.log('FormLogin', result)
       const data = {
         // accountId: result.data.accountId,
         isLogged: result.data.isLogged,

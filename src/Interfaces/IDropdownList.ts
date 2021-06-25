@@ -1,7 +1,7 @@
 export interface IFilterCategoryListItems {
   name: string
   checked?: boolean
-  fieldValue: string
+  fieldValue: string | boolean
   categoryValue?: string
   format?: string
 }

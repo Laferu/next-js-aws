@@ -15,7 +15,6 @@ const AlertModal = dynamic(
 )
 
 const Login = () => {
-
   const close = useCallback(() => {
     setIsModal(false)
   }, [])

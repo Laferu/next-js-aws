@@ -42,12 +42,13 @@ import { cpfMask } from '@/utils/masks'
 import { ParsedUrlQuery } from 'querystring'
 import PerfectScrollbar from '@/components/PerfectScrollbar'
 import { IFilterCategoryList } from '@/Interfaces/IDropdownList'
-import { ITransactionData, ITransactionsData } from '@/Interfaces/history-transaction'
+import { ITransactionData } from '@/Interfaces/history-transaction'
 
 const UserTransactions = ({ profile, user }) => {
   const {
     url,
     state: {
+      userData,
       setSelectedMenu,
       setTransactionData,
       setTransactionsData,
@@ -63,7 +64,13 @@ const UserTransactions = ({ profile, user }) => {
   const router = useRouter()
 
   const { slug }: ParsedUrlQuery = router.query
-  const name = user.person.name.split(' ')[0]
+  const name = user?.person?.name?.split(' ')[0] ?? user?.company?.name?.split(' ')
+
+  useEffect(() => {
+    return () => {
+      setSelectedMenu(null)
+    }
+  }, [])
 
   const filterMenuInitialValues = useCallback(() => {
     const filters: IFilterCategoryList[] = [
@@ -279,6 +286,7 @@ const UserTransactions = ({ profile, user }) => {
 
   const getData = useCallback(async (
     selected: number = 0,
+    noReset: boolean = false,
     queries: Object = {}
   ) => {
     setIsLoading(true)
@@ -296,7 +304,7 @@ const UserTransactions = ({ profile, user }) => {
       // console.log(historyData)
 
       if (historyData.data.length === 0) {
-        if (transactionsData.transactions.length > 0) {
+        if (transactionsData.transactions.length > 0 && noReset) {
           setTransactionsData(e => ({
             ...e,
             pageCount: e.pageCount - 1
@@ -359,7 +367,7 @@ const UserTransactions = ({ profile, user }) => {
   const initialData = useCallback(async () => {
     if (transactionsData.transactions.length === 0) {
       try {
-        await getData(0)
+        await getData(0, true)
         setIsLoading(false)
       } catch (error) {
         setIsError(true)
@@ -373,7 +381,7 @@ const UserTransactions = ({ profile, user }) => {
   const nextData = useCallback(async (evt) => {
     try {
       const data = createQueries()
-      await getData(evt.selected, data)
+      await getData(evt.selected, true, data)
     } catch (error) {
       console.log(error)
     }
@@ -382,7 +390,7 @@ const UserTransactions = ({ profile, user }) => {
   const filterAction = useCallback(async () => {
     try {
       const data = createQueries()
-      await getData(0, data)
+      await getData(0, false, data)
     } catch (error) {
       console.log(error)
     }
@@ -432,12 +440,12 @@ const UserTransactions = ({ profile, user }) => {
                 <ShadowBox>
                   <UserDataContainer>
                     <span />
-                    <h1>{user.person.name}</h1>
+                    <h1>{user?.person?.name ?? user?.company?.name}</h1>
                     <div className='icon-container' />
                     <div className='data-container'>
-                      <p className='cpf'>CPF: {cpfMask(user.person.cpf).formatedValue}</p>
+                      <p className='cpf'>CPF: {cpfMask(user?.person?.cpf ?? user?.company?.cnpj).formatedValue}</p>
                       <p className='date'>Cliente ativo desde: {format(new Date(user.createdAt), 'dd/MM/yyyy')}</p>
-                      <p className='amount'>Saldo disponível: <span>R$ 2.582,15</span></p>
+                      <p className='amount'>Saldo disponível: <span>{formatMoney(userData.amount)}</span></p>
                     </div>
                   </UserDataContainer>
                 </ShadowBox>

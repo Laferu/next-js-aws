@@ -13,7 +13,6 @@ import { useRouter } from 'next/router'
 
 import {
   ITransactionData,
-  ITransactionsData
 } from '@/Interfaces/history-transaction'
 
 import formatMoney from '@/utils/formatMoney';
@@ -309,9 +308,11 @@ const HistoryTransactions = ({ profile, accountId }) => {
 
   const getData = useCallback(async (
     selected: number = 0,
+    noReset: boolean = false,
     queries: Object = {}
   ) => {
     setIsLoading(true)
+
     try {
       const limit = 10
       const historyData = await getTransactions.refetch({
@@ -324,7 +325,7 @@ const HistoryTransactions = ({ profile, accountId }) => {
       // console.log(historyData.data)
 
       if (historyData.data.length === 0) {
-        if (transactionsData.transactions.length > 0) {
+        if (transactionsData.transactions.length > 0 && noReset) {
           setTransactionsData(e => ({
             ...e,
             pageCount: e.pageCount - 1
@@ -395,7 +396,7 @@ const HistoryTransactions = ({ profile, accountId }) => {
   const initialData = useCallback(async () => {
     if (transactionsData.transactions.length === 0) {
       try {
-        await getData(0)
+        await getData(0, true)
         setIsLoading(false)
       } catch (error) {
         setIsError(true)
@@ -411,7 +412,7 @@ const HistoryTransactions = ({ profile, accountId }) => {
       // console.log(evt.selected)
       const data = createQueries()
       // console.log(data)
-      await getData(evt.selected, data)
+      await getData(evt.selected, true, data)
       // setLimit(e => e + 10)
       // setIsLoading(false)
     } catch (error) {
@@ -425,7 +426,7 @@ const HistoryTransactions = ({ profile, accountId }) => {
     try {
       const data = createQueries()
       // console.log('queries', data)
-      await getData(0, data)
+      await getData(0, false, data)
       // setLimit(e => e + 10)
       // setIsLoading(false)
     } catch (error) {

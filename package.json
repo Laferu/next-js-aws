@@ -11,7 +11,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@swp/swipe-sdk": "^0.12.22",
+    "@swp/swipe-sdk": "^0.12.32",
     "@welldone-software/why-did-you-render": "^6.0.5",
     "axios": "^0.21.1",
     "cookie": "^0.4.1",

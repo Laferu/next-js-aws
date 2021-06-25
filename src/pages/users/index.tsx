@@ -14,8 +14,8 @@ import {
 import ReactPaginate from 'react-paginate'
 import { useRouter } from 'next/router'
 
-// import formatMoney from '@/utils/formatMoney';
-// import { useGetQuery } from '@/hooks/useRest'
+import formatMoney from '@/utils/formatMoney';
+import { useGetQuery } from '@/hooks/useRest'
 import Header from "@/components/Header"
 import SEO from "@/components/SEO"
 import Sidebar from "@/components/Sidebar"
@@ -24,7 +24,6 @@ import {
   Wrapper,
   StyledMain,
   Title,
-  // ScrollableTableContainer,
   ResponsiveTable,
   TrLink,
   PaginateContainer,
@@ -42,16 +41,13 @@ import { GlobalContext } from '@/utils/Context'
 import PerfectScrollbar from '@/components/PerfectScrollbar'
 import { cpfMask } from '@/utils/masks'
 
-import usersJson from './users.json'
 import { IFilterCategoryList } from '@/Interfaces/IDropdownList'
+import { IUserData } from '@/Interfaces/users'
 
 const Users = ({ profile }) => {
-  // const [history, setHistory] = useState<IHistory[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
   const [listFilterMenu, setListFilterMenu] = useState<IFilterCategoryList[]>([])
-  const [currentPage, setCurrentPage] = useState(0)
-  const [pageCount, setPageCount] = useState(10)
   const {
     url,
     state: {
@@ -73,24 +69,24 @@ const Users = ({ profile }) => {
           {
             name: 'Ativo',
             checked: false,
-            fieldValue: 'active'
+            fieldValue: true
           },
           {
             name: 'Inativo',
             checked: false,
-            fieldValue: 'desactive'
+            fieldValue: false
           }
         ]
       },
       {
         name: 'Cliente',
-        fieldName: 'client',
+        fieldName: 'name',
         type: 'search',
         value: ''
       },
       {
         name: 'CPF/CNPJ',
-        fieldName: 'cpf',
+        fieldName: 'document',
         type: 'search',
         format: 'cpf',
         value: ''
@@ -105,25 +101,26 @@ const Users = ({ profile }) => {
     ])
   }, [])
 
-  // const getTransactions = useGetQuery('history-transactions')
+  const getUsers = useGetQuery('users')
 
   const createQueries = useCallback(() => {
-    return listFilterMenu.reduce((acc, crr) => {
+    const filters: IFilterCategoryList[] = listFilterMenu || usersData.filters
+    return filters.reduce((acc, crr) => {
       if (crr.value) {
-        if (crr.fieldName === 'date') {
-          return {
-            ...acc,
-            queryParams: {
-              fromDate: formatISO(crr.value[0]),
-              toDate: formatISO(crr.value[1])
-            }
-          }
-        }
         return {
           ...acc,
-          fields: {
+          [crr.fieldName]: crr.value
+        }
+      }
+      if (crr.fieldName === 'status') {
+        const status = crr.list.filter(e => e.checked === true)
+        if (status.length === crr.list.length) {
+          return acc
+        }
+        if (status.length > 0) {
+          return {
             ...acc,
-            [crr.fieldName]: crr.value
+              status: status.map(e => e.fieldValue).toString()
           }
         }
       }
@@ -132,67 +129,70 @@ const Users = ({ profile }) => {
     }, {})
   }, [listFilterMenu])
 
-  const getData = useCallback(async () => {
-    // const newArray = [...usersJson]
-    const newArray = usersJson.map(e => {
-      return {
-        ...e,
-        status: e.status === 'BASIC_APPROVED' ? 'Aprovado' : 'Criado'
+  const getData = useCallback(async (
+    selected: number = 0,
+    noReset: boolean = false,
+    queries: Object = {}
+  ) => {
+    setIsLoading(true)
+
+    try {
+      const limit = 10
+      const usersList = await getUsers.refetch({
+        limit,
+        starting_after: limit * selected,
+        queryParams: { ...queries, with_balance: true }
+      })
+
+      if (usersList.data.length === 0) {
+        if (usersData.users.length > 0 && noReset) {
+          setUsersData(e => ({
+            ...e,
+            pageCount: e.pageCount - 1
+          }))
+          setIsLoading(false)
+          return
+        }
+        setIsLoading(false)
+      } else {
+        setUsersData(e => ({
+          ...e,
+          currentPage: selected
+        }))
+
+        if (
+          selected + 1 >= usersData.pageCount &&
+          usersList.data.length === limit
+        ) {
+          setUsersData(e => ({
+            ...e,
+            pageCount: e.pageCount + 1
+          }))
+        }
       }
-    })
-    setUsersData([...newArray])
-  }, [])
 
-  // const getData = useCallback(async (
-  //   selected = 0,
-  //   queries = []
-  // ) => {
-  //   setIsLoading(true)
-  //   setCurrentPage(selected)
+      setUsersData(e => ({
+        ...e,
+        users: usersList.data
+      }))
 
-  //   try {
-  //     const limit = 10
-  //     const historyData = await getTransactions.refetch({
-  //       id: accountId,
-  //       limit,
-  //       starting_after: limit * selected,
-  //       realLimit: 0,
-  //       ...queries
-  //     })
-
-  //     console.log(historyData)
-
-  //     const newArray = historyData.data.map(e => {
-  //       const isNegative = !e.positive
-  //       const value = `${!isNegative ? '+' : '-'}${formatMoney(Number(e.amount))}`
-  //       const date = format(new Date(e.date), 'dd/MM/yyyy')
-
-  //       return {
-  //         ...e,
-  //         date,
-  //         value,
-  //         isNegative
-  //       }
-  //     })
-
-  //     setHistory(newArray)
-  //     // setCurrentPage(historyData.pagination.)
-  //     setPageCount(Math.ceil(historyData.pagination.itemCount / limit))
-  //     // console.log(Math.ceil(historyData.pagination.itemCount / limit))
-
-  //     setIsLoading(false)
-  //     setIsError(false)
-  //   } catch (error) {
-  //     console.log(error)
-  //     setIsError(true)
-  //     setIsLoading(false)
-  //   }
-  // }, [listFilterMenu])
+      setIsLoading(false)
+      setIsError(false)
+    } catch (error) {
+      console.log(error)
+      setUsersData(e => ({
+        ...e,
+        users: []
+      }))
+      setIsError(true)
+      setIsLoading(false)
+    }
+  }, [usersData.filters, listFilterMenu, usersData.pageCount, usersData.users])
 
   const initialData = useCallback(async () => {
-    if (usersData.length === 0) {
+    if (usersData.users.length === 0) {
       try {
-        await getData()
+        await getData(0, true)
         setIsLoading(false)
       } catch (error) {
         setIsError(true)
@@ -206,44 +206,22 @@ const Users = ({ profile }) => {
   const nextData = useCallback(async (evt) => {
     try {
       const data = createQueries()
-      // await getData(evt.selected, data)
-      // setLimit(e => e + 10)
-      // setIsLoading(false)
+      await getData(evt.selected, true, data)
     } catch (error) {
       console.log(error)
-      // setIsError(true)
-      // setIsLoading(false)
     }
-  // }, [getData])
-  }, [])
+  }, [getData, createQueries])
 
   const filterAction = useCallback(async () => {
     try {
       const data = createQueries()
-      // await getData(0, data)
-      // setLimit(e => e + 10)
-      // setIsLoading(false)
+      await getData(0, false, data)
     } catch (error) {
       console.log(error)
-      // setIsError(true)
-      // setIsLoading(false)
     }
-  // }, [getData])
-  }, [])
+  }, [getData, createQueries])
 
-  const goToTransactionDetails = useCallback(evt => {
-    // setTransactionsData(e => ({
-    //   ...e,
-    //   filters: [],
-    //   transactions: [],
-    //   pageCount: 1,
-    //   currentPage: 1
-    // }))
-    // if (evt.arr === 'ledger') {
-    //   router.push(`${url.baseUrl}/history-transactions/${evt.arr}/${evt.index}/${evt.id}`)
-    //   return
-    // }
-    // router.push(`${url.baseUrl}/history-transactions/${evt.arr}/${evt.method}/${evt.id}`)
+  const goToUserTransactions = useCallback((evt: IUserData) => {
     setUserData(evt)
     router.push(`${url.baseUrl}/users/${evt.id}`)
   }, [])
@@ -316,10 +294,11 @@ const Users = ({ profile }) => {
                                 <td data-label='CPF'>451.xxx.xxx-xx</td>
                               </TrLink>
                             ))} */}
-                            {usersData.map((e, index) => (
+                            {console.log(usersData)}
+                            {usersData.users.map((e, index) => (
                               <TrLink
                                 key={index}
-                                onClick={() => goToTransactionDetails(e)}
+                                onClick={() => goToUserTransactions(e)}
                               >
                                 <td data-label='Status'>
                                   {e.status}
@@ -328,7 +307,7 @@ const Users = ({ profile }) => {
                                 <td data-label='CPF/CNPJ'>
                                   {cpfMask(e.document).formatedValue}
                                 </td>
-                                <td data-label='Saldo'>{e.amount}</td>
+                                <td data-label='Saldo'>{formatMoney(e.amount)}</td>
                               </TrLink>
                             ))}
                           </tbody>
@@ -347,8 +326,8 @@ const Users = ({ profile }) => {
                     containerClassName={'pagination'}
                     subContainerClassName={'pages pagination'}
 
-                    forcePage={currentPage}
-                    pageCount={pageCount}
+                    forcePage={usersData.currentPage}
+                    pageCount={usersData.pageCount}
                     marginPagesDisplayed={2}
                     pageRangeDisplayed={2}
                     onPageChange={nextData}

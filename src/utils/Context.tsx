@@ -9,7 +9,7 @@ import {
   ITransactionData,
   ITransactionsData
 } from '@/Interfaces/history-transaction'
-import { IUsersData } from '@/Interfaces/users'
+import { IUserData, IUsersData } from '@/Interfaces/users'
 
 interface IState {
   isLoading: boolean
@@ -26,10 +26,10 @@ interface IState {
   setTransactionsData: React.Dispatch<React.SetStateAction<ITransactionsData>>
   transactionData: ITransactionData
   setTransactionData: React.Dispatch<React.SetStateAction<ITransactionData>>
-  userData: IUsersData
-  setUserData: React.Dispatch<React.SetStateAction<IUsersData>>
-  usersData: IUsersData[]
-  setUsersData: React.Dispatch<React.SetStateAction<IUsersData[]>>
+  userData: IUserData
+  setUserData: React.Dispatch<React.SetStateAction<IUserData>>
+  usersData: IUsersData
+  setUsersData: React.Dispatch<React.SetStateAction<IUsersData>>
 }
 
 interface IFunctions {
@@ -135,13 +135,18 @@ export const GlobalProvider = ({ children }) => {
     value: '',
     isNegative: false
   })
-  const [usersData, setUsersData] = useState<IUsersData[]>([])
-  const [userData, setUserData] = useState<IUsersData>({
+  const [usersData, setUsersData] = useState<IUsersData>({
+    filters: [],
+    users: [],
+    pageCount: 1,
+    currentPage: 1
+  })
+  const [userData, setUserData] = useState<IUserData>({
     id: '',
     name: '',
     document: '',
     status: '',
-    amount: '',
+    amount: 0,
   })
 
   return (
